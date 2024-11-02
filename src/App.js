@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-
-        <p>
-            VS webiste rules the space.
-        </p>
-
-   
+    <div className="App">
+      <h1>Welcome to the VS Website</h1>
+      <p>
+        VS website rules the space.
+      </p>
+    </div>
   );
 }
 
