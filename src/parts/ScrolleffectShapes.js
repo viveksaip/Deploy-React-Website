@@ -4,6 +4,8 @@ import '../App.css';  // Import your CSS
 
 const ScrollText = () => {
   // Setup IntersectionObserver hook with vertical scroll trigger
+
+  /*
   const { ref: ref1, inView: inView1 } = useInView({
     triggerOnce: false,   // Trigger only once when in view
     threshold: 0.1,      // Trigger when 10% of the element is in the viewport
@@ -13,6 +15,8 @@ const ScrollText = () => {
     triggerOnce: false,
     threshold: 0.1,
   });
+
+  */
 
   const { ref: ref3, inView: inView3 } = useInView({
     triggerOnce: false,
@@ -24,10 +28,12 @@ const ScrollText = () => {
     threshold: 0.1,
   });
 
+  
   const { ref: ref5, inView: inView5 } = useInView({
     triggerOnce: false,
     threshold: 0.1,
   });
+
 
   return (
     <>

@@ -22,7 +22,7 @@ import React from 'react';
 import './App.css'; 
 
 import Services from './parts/Services';
-import Scrolleffect from './parts/Scrolleffect';
+//import Scrolleffect from './parts/Scrolleffect';
 import ScrolleffectShapes from './parts/ScrolleffectShapes';
 
 
@@ -50,7 +50,7 @@ function App() {
         <p className='headsubs'>Contact</p> 
       </div>
 
-      <img src={front} style={{ width: '100%', height: 'auto' }}></img>
+      <img src={front} style={{ width: '100%', height: 'auto' }} alt=""></img>
 
       <Services />
 
@@ -58,7 +58,7 @@ function App() {
 
       <div className='VScssContainer'> 
         <div className='VScss2'>
-          <img src={CustomerImage}></img>
+          <img src={CustomerImage} alt=""></img>
         </div>
 
         <div className='VScss3'>

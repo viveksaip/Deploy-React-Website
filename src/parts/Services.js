@@ -1,13 +1,7 @@
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
 import '../App.css';  // Import your CSS
 
 function Services() {
-    
-    const { ref, inView } = useInView({
-        triggerOnce: false,   // Trigger only once when in view
-        threshold: 0.1,      // Trigger when 10% of the element is in the viewport
-    });
 
     return (
             
