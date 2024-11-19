@@ -1,38 +1,319 @@
-.App {
+
+
+.VScss {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.VScssContainer {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.VSgap {
+  height: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.VScss2 {
+
+  width: 50%;
+  height: 500px;
+  background-color: white;
+  overflow: hidden; 
+  
+}
+
+.VScss2 img {
+  max-width: 80%; /* Ensures the image fits within the container's width */
+  height: 80%;  /* Maintains the image's aspect ratio */
+  object-fit: cover; 
+  padding: 50px;  
+}
+
+.VScss3 {
+  width: 50%;
+  height: 500px;
+  background-color: white;
+}
+
+.VScss2row {
+
+  width: 25%;
+  height: 200px;
+  background-color: rgb(57, 125, 126);
+}
+
+
+.VScss3row {
+  width: 25%;
+  height: 200px;
+  background-color: rgb(57, 125, 126);
+}
+
+.VScss4row {
+  width: 25%;
+  height: 200px;
+  background-color: rgb(57, 125, 126);
+}
+
+.VScss5row {
+  width: 25%;
+  height: 200px;
+  background-color: rgb(57, 125, 126);
+}
+
+h1 {
+  color: white; /* White text color for the heading */
+}
+
+.hgreenServices {
+  color: rgb(57, 125, 126); 
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+
+  margin-bottom: -80px; /* Remove the space below the heading */
+
+}
+
+.hgreen {
+  color: rgb(57, 125, 126); 
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+.About_Green {
+  color: rgb(57, 125, 126); 
+  font-weight: bold;
+  font-size: 50px;
+
+}
+
+
+.textboxcss {
+  color: black;
+  width: 80%;
+  height: 150px;
+  padding: 20px;
+  margin: 0px 0px 0px 150px;
+  border-radius: 20px;
+  border: 2px solid;
+}
+
+
+.textboxcssMssgSent {
+  color: black;
+  width: 80%;
+  height: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgb(57, 125, 126);
+  text-align: center;
+  margin: 10px 10px 10px 150px;
+  border-radius: 15px;
+
+  font-size: 18px;
+  border: 2px solid;
+
+}
+
+.textboxcssMssgSent::placeholder {
+  color: white;  
+}
+
+.App {
+  text-align: center;
+  background-color: #f0f8ff; /* Light background color */
+  min-height: 100vh; /* Full height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Arial', sans-serif; /* Font style */
+  position: relative; /* Position for absolute elements */
+  overflow: hidden; /* Hide overflow to keep hearts within bounds */
+}
+
+
+
+/*
+
+padding: 20px;
+
+padding-top: 10px;
+padding-right: 20px;
+padding-bottom: 15px;
+padding-left: 5px;
+
+/////////////////////////// 
+
+margin: 20px;
+
+margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 15px;
+margin-left: 5px;
+
+
+*/
+
+.main-p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+
+/* App.css */
+.hover-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
   color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for color and scale */
 }
 
-.App-link {
-  color: #61dafb;
+.hover-button:hover {
+  background-color: #2ecc71; /* Change background on hover */
+  transform: scale(1.1); /* Slightly increase size */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+/* The element starts off invisible and off-screen */
+.text-appear {
+  opacity: 0;
+  transform: translateY(50px);  /* Start with a small vertical offset */
+  transition: opacity 2s ease-out, transform 2s ease-out;  /* Smooth fade and slide effect */
+  color: black;
+  background-color: aqua;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* When the element is in view, it becomes visible and slides into place */
+.text-appear.visible {
+  opacity: 1;
+  transform: translateY(0);  /* Return to its normal position */
+}
+
+/* Initial state of the text */
+.text-slide-right {
+  opacity: 0;
+  transform: translateX(150px);  /* Initially off-screen */
+  transition: opacity 2s ease, transform 2s ease;  /* Apply transition for opacity and transform */
+  color: black;
+  background-color: bisque;
+}
+/* When in view, slide in and fade in */
+.text-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);  /* Move into place */
+}
+
+.text-slide-left {
+  opacity: 0;
+  transform: translateX(-150px);  /* Initially off-screen */
+  transition: opacity 2s ease, transform 2s ease;  /* Apply transition for opacity and transform */
+  color: black;
+}
+/* When in view, slide in and fade in */
+.text-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);  /* Move into place */
+}
+
+
+.VShead {
+  position: fixed;  /* Fix the entire container to the top */
+  top: 0;           /* Align to the top of the viewport */
+  width: 100%;      /* Make sure it takes the full width of the viewport */
+  background-color: rgb(57, 125, 126);  /* Optional background color */
+  display: flex;
+  align-items: center;
+
+}
+
+.title {
+  width: 50%;
+  text-align: start;
+  font-size: 25px;
+  color: white;
+  margin-left: 100px;
+  font-weight: bold;
+
+}
+
+.headsubs {
+  width: 10%;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.horizontal-cylinder {
+  width: 1300px; /* Length of the cylinder */
+  height: 80px; /* Height of the cylinder (diameter of the rounded ends) */
+  background: linear-gradient(180deg, #808080, #b0b0b0); /* Gradient for shading */
+  background: linear-gradient(180deg, #8c8e15, #438953); 
+  border-radius: 75px; /* Half of the height for rounded left and right ends */
+  position: relative; /* To add shadow effects */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+  margin: 50px auto; /* Center it horizontally and add space from top */
+  
+  display: flex; /* Use Flexbox to center the content */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+}
+
+.horizontal_cylinder_medium {
+  width: 1100px; /* Length of the cylinder */
+  height: 80px; /* Height of the cylinder (diameter of the rounded ends) */
+  background: linear-gradient(180deg, #808080, #b0b0b0); /* Gradient for shading */
+  background: linear-gradient(180deg, #8c8e15, #438953); 
+  border-radius: 75px; /* Half of the height for rounded left and right ends */
+  position: relative; /* To add shadow effects */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+  margin: 50px auto; /* Center it horizontally and add space from top */
+  
+  display: flex; /* Use Flexbox to center the content */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+}
+
+.horizontal_cylinder_small {
+  width: 900px; /* Length of the cylinder */
+  height: 80px; /* Height of the cylinder (diameter of the rounded ends) */
+  background: linear-gradient(180deg, #808080, #b0b0b0); /* Gradient for shading */
+  background: linear-gradient(180deg, #8c8e15, #438953); 
+  border-radius: 75px; /* Half of the height for rounded left and right ends */
+  position: relative; /* To add shadow effects */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+  margin: 50px auto; /* Center it horizontally and add space from top */
+  
+  display: flex; /* Use Flexbox to center the content */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+}
+
+
+.vertical_cylinder {
+  width: 250px; /* Length of the cylinder */
+  height: 400px; /* Height of the cylinder (diameter of the rounded ends) */
+  background: linear-gradient(180deg, #8c8e15, #438953); 
+  /*background: rgb(153, 215, 228); */
+  border-radius: 75px; /* Half of the height for rounded left and right ends */
+  position: relative; /* To add shadow effects */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+  margin: 0 auto; /* Center it horizontally and add space from top */
+  
+  display: flex; /* Use Flexbox to center the content */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+
+  flex-direction: column; /* Stack text vertically */
+
 }
